@@ -69,6 +69,8 @@ k: () => osc([15,5,1],25,3).colorama(-0.10).modulateKaleid(noise([5,1]),0.5).rot
 traduccion: () => voronoi(.5,.2,.9).modulate(noise(.5),0.5).color(9,5,6).luma(0.5),
 global: () => osc(2,1,.009).pixelate(10,10).kaleid(8),
 intraducibilidad: () => noise(5).color(4,5,7).pixelate(10,10),
+follow: () => osc(4,0.1,2).luma(0).mult(voronoi([10,5,15],0.2, 0.5).thresh(0.5, 0.1)).scale([2,3].fast(1.2)).rotate(15,2).modulate(src(o0)).modulateScale(osc([1,4,8],-0.5,0).scale(2),15,0).modulatePixelate(noise(5).pixelate([8,2,5],[2,8,5]),1024,8),
+
 magt : () => {
   osc(40,0.5,() => a.fft[0]*200).out(o2)
   let shape = osc(60, 0.1, 2)
