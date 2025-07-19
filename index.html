@@ -99,6 +99,19 @@ magt : () => {
         }
       }
 
+      // Si contiene comas: modulación encadenada
+      if (texto.includes("x")) {
+        const modWords = texto.split(",").map(w => w.trim()).filter(w => palabras[w]);
+        if (modWords.length >= 2) {
+          let base = palabras[modWords[0]]();
+          for (let i = 1; i < modWords.length; i++) {
+            base = palabras[modWords[i]]().modulateScale(base, 0.5 + 0.3 * Math.random()); // modulación aleatoria
+          }
+          base.out();
+          return;
+        }
+      }
+
       // Si no hay coma, renderiza todo en capas independientes
       const entradas = texto.split(/\s+/).map(w => w.trim()).filter(w => palabras[w]);
       if (entradas.length > 0) {
