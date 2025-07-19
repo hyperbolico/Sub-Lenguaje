@@ -68,6 +68,7 @@ j: () => voronoi([9,15],3,4).colorama(-0.6).modulatePixelate(voronoi([9,10]),0.5
 k: () => osc([15,5,1],25,3).colorama(-0.10).modulateKaleid(noise([5,1]),0.5).rotate(8,5).scale(0.45,3,5).colorama(-5),
 traduccion: () => voronoi(.5,.2,.9).modulate(noise(.5),0.5).color(9,5,6).luma(0.5),
 global: () => osc(2,1,.009).pixelate(10,10).kaleid(8),
+intraducibilidad: () => noise(5).color(4,5,7).pixelate(10,10),
 };
 
     const input = document.getElementById("input");
