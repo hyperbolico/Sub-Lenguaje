@@ -66,6 +66,21 @@ h: () => noise(10,4,10).modulateRepeatX(osc([15,9]),0.5).colorama(-0.590).mult(o
 i: () => osc().scale(10).rotate(4,5).kaleid(10).colorama(0.9).modulateScrollX(osc(),0.5).mult(voronoi([5,8],8)).colorama(0.8),
 j: () => voronoi([9,15],3,4).colorama(-0.6).modulatePixelate(voronoi([9,10]),0.5).colorama(1).mult(osc([3,5]),0.5).colorama(-0.2).luma(0.3,0.5),
 k: () => osc([15,5,1],25,3).colorama(-0.10).modulateKaleid(noise([5,1]),0.5).rotate(8,5).scale(0.45,3,5).colorama(-5),
+      
+ traduccion: () => voronoi(.5,.2,.9).modulate(noise(.5),0.5.color(9,5,6).lumma(0.5),
+      intraducibilidad: () => noise(5).color(4,5,7).pixelate(10,10),
+      global: () => osc(2,1,.009).pixelate(10,10).kaleid(8),
+      interfaz: () => osc(.5,.3,.6).diff(shape(2)).mult(osc(1, -0.1)),
+      dialogo: () => osc(12,0.01,0.001).mult(osc(1,0.1).modulate(osc(2).rotate(4,1),20)).color(0,2.4,5).saturate(0.2).luma(1,0.1)).scale(0.7, ()=> 0.7 + a.fft[3]).diff(o0),
+      texto: () => osc([2,4,3,4].fast(.2),.5,12).pixelate(40,2,8).color(5,3,.4),
+      contrario: () => solid(1,2,5).invert([0,1]),
+      territorio: () => osc(1,1,1).diff(shape()).scale(0.5).add(shape(7),[0,0.25,0.5,0.75,1].fast(10)),
+      transformacion: () => osc(1,5,1).saturate( ({time}) => Math.sin(time) * 10 ),   
+
+
+
+
+      
     };
 
     const input = document.getElementById("input");
